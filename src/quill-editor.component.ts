@@ -167,7 +167,7 @@ export class QuillEditorComponent implements AfterViewInit, ControlValueAccessor
           html = null;
       }
 
-      this.onModelChange(html);
+      this.onModelChange(delta);
 
       this.onContentChanged.emit({
         editor: this.quillEditor,
