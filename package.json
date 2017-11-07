@@ -16,7 +16,7 @@
     "lint": "tslint --force \"src/**/*.ts\"",
     "bundle": "webpack --display-error-details && cp dist/bundles/ngx-quill.umd.js dist/bundles/index.js",
     "copyStaticToDist": "cp ./package.json ./dist && cp ./README.md ./dist && cp ./LICENSE.txt ./dist",
-    "build": "rm -rf ./dist && tsc && npm run bundle && npm run build:aot && npm run copyStaticToDist",
+    "build": "tsc && npm run bundle && npm run build:aot && npm run copyStaticToDist",
     "build:aot": "rm -rf aot && node_modules/.bin/ngc -p tsconfig-aot.json && rm -rf ./dist/aot/node_modules",
     "pretest": "npm run lint",
     "test": "./node_modules/.bin/karma start",
