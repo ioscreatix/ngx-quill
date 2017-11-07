@@ -137,7 +137,7 @@ export class QuillEditorComponent implements AfterViewInit, ControlValueAccessor
     });
 
     if (this.content) {
-      const contents = this.quillEditor.clipboard.convert(this.content);
+      const contents = this.content;
       this.quillEditor.setContents(contents);
       this.quillEditor.history.clear();
     }
@@ -191,7 +191,7 @@ export class QuillEditorComponent implements AfterViewInit, ControlValueAccessor
 
     if (this.quillEditor) {
       if (currentValue) {
-        this.quillEditor.setContents(this.quillEditor.clipboard.convert(this.content));
+        this.quillEditor.setContents(this.content);
         return;
       }
       this.quillEditor.setText('');
