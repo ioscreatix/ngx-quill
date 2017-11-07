@@ -6,6 +6,8 @@ Angular (>=2) component for rich text editor Quill
 
 ngx-quill is the new angular (>=2) implementation of ngQuill.
 
+## This fork simply utilizes the delta format for databinding rather than a simple string
+
 ## Examples
 - [demo-page](https://killercodemonkey.github.io/ngx-quill-example)
 - [example-repo](https://github.com/killerCodeMonkey/ngx-quill-example)
