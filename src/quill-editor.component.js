@@ -103,7 +103,7 @@ var QuillEditorComponent = (function () {
             if (html === '<p><br></p>') {
                 html = null;
             }
-            _this.onModelChange(delta);
+            _this.onModelChange(_this.quillEditor.getContents());
             _this.onContentChanged.emit({
                 editor: _this.quillEditor,
                 html: html,
